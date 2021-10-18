@@ -21,13 +21,44 @@
         </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+        
     </head>
     <body>        
         <h1>tp2</h1>
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+        <h1>Saisie d'une fiche "Personne".</h1>
+    
+
+
+
+
+        <from>
+            <fieldset>
+          
+            <p><label>Nom</label> : </br> <input type="text" id="fname" /></p>
+            <p><label>Prénom</label> : </br> <input type="text" id="lname" /></p>
+            <p><label>Date de naissance</label> : </br> <input type="date" id="date" placeholder="JJ/MM/AAAA" /></p>
+            <p><label>Adresse</label> : </br> <input type="text" id="text" /></p>
+            <p><label>Mail</label> : </br> <input type="email" id="email" /></p>
+            <input onclick="ValiderFormulaire() "type="button" value="Valider"/>
+
+            
+        
+            </fieldset>
+
+            
+            <div id="error"> 
+                
+            </div> 
+         
+        
+          </form>
+
+
+
+
+
     </body>
 </html>
