@@ -30,10 +30,10 @@ function ValiderFormulaire()
        
     }else if((prenom.length < 5) || (prenom.length > 20 )){
         if(nom.length =0){
-           message ="La saisie du nom est obligatoire";
+           message ="La saisie du prenom est obligatoire";
      
         }else{
-        message ="La taille du nom doit etre entre 5 et 20 caractères";
+        message ="La taille du prenom doit etre entre 5 et 20 caractères";
         }
         document.getElementById("bodyModel").style.backgroundColor ="red"; 
        document.getElementById("bodyModel").innerHTML = message;
