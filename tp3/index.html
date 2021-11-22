@@ -34,7 +34,96 @@
 
 <body>
     <div class="container">
-<h1>TP AW</h1>
+        <h1>TP AW</h1>
+        <d1>Avec boostrap 5</d1>
+
+        <div class="row">
+            <div class="col-lg-2 ">
+
+            </div>
+
+
+            <div class="col-lg-8  ">
+
+
+                <div class="mt-4 p-2  text-white rounded"
+                    style="background-color: #3d5b5c;height: auto;padding-bottom: 6px;">
+
+
+                    <div class="container mt-6">
+                        <h4 style="font-family: Georgia, serif;color: grey;text-align: center;color:#f1f1f7 ;"> Saisie
+                            d'une fiche "PERSONNE"</h4>
+
+                        <form action="">
+
+                            <div class="mb-3 mt-3">
+                                <label for="email">Nom:</label>
+                                <input type="text" class="form-control" id="nom" placeholder="Entrer nom" name="nom">
+                            </div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="email">Prénom:</label>
+                                <input type="text" class="form-control" id="prenom" placeholder="Entrer prénom"
+                                    name="prenom">
+                            </div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="adress">Adresse:</label>
+                                <input type="adress" class="form-control" id="adresse" placeholder="Entrer l'adresse"
+                                    name="adresse">
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label for="email">Date de naissance:</label>
+
+                                <input type="text" placeholder="JJ/MM/AAAA" class="form-control" id="datede">
+
+
+                            </div>
+
+
+                            <div class="mb-3 mt-3">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Entrer email"
+                                    name="email">
+                            </div>
+
+
+
+                            <div class="form-check mb-3">
+                                <label class="form-check-label" style="margin-left: 8px;">
+                                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                                </label>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <button id="myBtn" onclick="ValiderFormulaire()" type="submit" class="btn btn-success" style="background-color: #0073cc;margin-left: 12px;position: inherit;
+            width: 181px;">Valider</button>
+
+
+                    <div id="messageSection" class="form-group" style="margin-top: 30px;display: none;">
+
+                        <textarea id="bodyModel" class="form-control" style="color: white;" rows="3"></textarea>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-3 ">
+
+            </div>
+
+        </div>
+
 
         <!-- Content here -->
     </div>
