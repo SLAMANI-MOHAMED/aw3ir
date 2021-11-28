@@ -27,6 +27,7 @@ $(document).ready(function () {
             return regex.test(email);
 
         }
+        
         if (!isEmail($("#Mail").val())) {
 
             $("#Mail").addClass('is-invalid');
