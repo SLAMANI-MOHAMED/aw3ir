@@ -1,13 +1,8 @@
 <!doctype html>
 <html>
 
+
 <head>
-    <!-- CSS boostrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-
-    <!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
-    <script src="js/bootstrap.bundle.js"></script>
-
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>TP3</title>
@@ -16,8 +11,14 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="js/form-jquery-validation.js"></script>
     <style>
+
         body {
             background-color: #e9ebee;
             font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
@@ -25,114 +26,82 @@
             margin: 0 auto;
             max-width: 800px;
         }
+
     </style>
 
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
+    
+
+
 </head>
+<h1> TP3 AW formulaire-V2</h1>
 
 <body>
-    <script src="js/form-validation.js"></script>
     <div class="container">
-        <h1>TP AW</h1>
-        <d1>Avec boostrap 5</d1>
-
-        <div class="row">
-            <div class="col-lg-2 ">
-
-            </div>
-
-
-            <div class="col-lg-8  ">
-
-
-                <div class="mt-4 p-2  text-white rounded"
-                    style="background-color: #3d5b5c;height: auto;padding-bottom: 6px;">
-
-
-                    <div class="container mt-6">
-                        <h4 style="font-family: Georgia, serif;color: grey;text-align: center;color:#f1f1f7 ;"> Saisie
-                            d'une fiche "PERSONNE"</h4>
-
-                        <form action="">
-
-                            <div class="mb-3 mt-3">
-                                <label for="email">Nom:</label>
-                                <input type="text" class="form-control" id="nom" placeholder="Entrer nom" name="nom">
-                            </div>
-
-                            <div class="mb-3 mt-3">
-                                <label for="email">Prénom:</label>
-                                <input type="text" class="form-control" id="prenom" placeholder="Entrer prénom"
-                                    name="prenom">
-                            </div>
-
-                            <div class="mb-3 mt-3">
-                                <label for="adress">Adresse:</label>
-                                <input type="adress" class="form-control" id="adresse" placeholder="Entrer l'adresse"
-                                    name="adresse">
-                            </div>
-
-
-
-                            <div class="form-group">
-                                <label for="email">Date de naissance:</label>
-
-                                <input type="text" placeholder="JJ/MM/AAAA" class="form-control" id="datede">
-
-
-                            </div>
-
-
-                            <div class="mb-3 mt-3">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Entrer email"
-                                    name="email">
-                            </div>
-
-
-
-                            <div class="form-check mb-3">
-                                <label class="form-check-label" style="margin-left: 8px;">
-                                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                                </label>
-                            </div>
-
-                        </form>
-                    </div>
-
-                    <button id="myBtn" onclick="ValiderFormulaire()" type="submit" class="btn btn-success" style="background-color: #0073cc;margin-left: 12px;position: inherit;
-                     width: 181px;">Valider</button>
-
-
-                    <div id="messageSection" class="form-group" style="margin-top: 30px;display: none;">
-
-                        <textarea id="bodyModel" class="form-control" style="color: white;" rows="3"></textarea>
-                    </div>
-
-
-
-
+        <form>
+            <div class="form-group">
+                <div class="form-group ">
+                    <label for="Nom">Nom</label>
+                    <input type="text" class="form-control " id="Nom" placeholder="Nom">
+                    <span class="help-block-nom  text-danger" style="display: none;">Le Nom doit avoir au moins 5
+                        caractères</span>
                 </div>
             </div>
-
-
-
-            <div class="col-lg-3 ">
+            <div class="form-group">
+                <label for="Prenom">Prénom</label>
+                <input type="text" class="form-control" id="Prenom" placeholder="Prénom">
+                <span class="help-block-prenom  text-danger" style="display: none;">Le Prenom doit avoir au moins 5
+                    caractères</span>
 
             </div>
+            <div class="form-group">
+                <label for="Adress">Address</label>
+                <input type="text" class="form-control" id="Adress" placeholder="1234 Main St">
+                <span class="help-block-adress  text-danger" style="display: none;">L'adresse doit avoir au moins 5
+                    caractères</span>
+            </div>
+            <div class="form-group">
+                <label for="Mail">Mail</label>
+                <input type="text" class="form-control" id="Mail" placeholder="mail">
+                <span class="help-block-email text-danger" style="display: none;">Le Mail doit etre valide</span>
 
+            </div>
+            <div class="form-group">
+                <label for="DateDeNaissance">Date de naissance</label>
+                <input type="date" class="form-control" id="DateDeNaissance" placeholder="Date de naissance">
+            </div>
+            <button type="submit" class="btn btn-primary" id="valid">valider</button>
+        </form>
+
+
+        </table>
+        </form>
+
+
+        <div id="resultat"></div>
+        <div id="erreur"></div>
+
+
+        <div class="modal" tabindex="-1" role="dialog" id="myModal" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Bienvenue haitam</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"> </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
+</body>
 
+</div>
 
-        <!-- Content here -->
-    </div>
-
-    <h1>tp3</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
 </body>
 
 </html>
